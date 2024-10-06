@@ -1,10 +1,17 @@
-import "./App.css"
-function App() {
-  return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">Hello, Vite + React + Tailwind CSS!</h1>
-    </div>
-  );
+import React from 'react';
+import "./App.css";
+import ResponsiveAppBar from './Components/AppBar';
+
+const customStyle = {
+  displayNone: "none" 
 }
+
+const App: React.FC = () => {
+  return (
+    <>
+      <ResponsiveAppBar customStyle={customStyle} navList={["home", "contact", "about"]} />
+    </>
+  );
+};
 
 export default App;
